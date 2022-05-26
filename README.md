@@ -124,6 +124,5 @@ GET /transactions/{user_email}/summary
 - Optimize based on your available time, not on app performance 
 - Unit tests 
 - Dockerized app 
-- Deliver as a private git repository, sharing with the GitHub user “belvo-hiring” when complete and indicating your GitHub user to the people team. 
 - Good to haves: 
     - Django + DRF as framework
