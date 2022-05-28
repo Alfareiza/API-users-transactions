@@ -1,7 +1,8 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
 
-from core.base.views import call_transactions
+from core.base.views import TransactionsViewSet
 
-urlpatterns = [
-    path('v1/transactions', call_transactions, name='call_transactions')
-]
+router = DefaultRouter()
+router.register(r'', TransactionsViewSet, basename='transactions')
+
+transactions_urls = router.urls
