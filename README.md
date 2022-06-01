@@ -126,3 +126,41 @@ GET /transactions/{user_email}/summary
 - Dockerized app 
 - Good to haves: 
     - Django + DRF as framework
+
+## Setting up
+
+### Requirements
+
+- Python installed. 3.8 or higher.
+- Docker and Docker Compose installed.
+
+### Preparing the project
+
+Assuming that linux is used to experience this project and once the repository has been cloned, a folder is created with the name of the project `belvo-hiring`.
+
+Go toward this folder using the terminal, and execute:
+
+Build image 
+
+`sudo docker build .`
+
+Build docker image
+
+`sudo docker compose build`
+
+Execute the migrations  
+
+`sudo docker compose run --rm core sh -c "python manage.py migrate"`
+
+Execute the tests
+
+`sudo docker compose run --rm core sh -c "python manage.py test"`
+
+### Execute the program
+
+`sudo docker compose up`
+
+## Enjoy the program
+
+To access to the api, once the `docker compose up` command has been executed, go to the url http://localhost:8000 or through any advice in the same LAN using the ip of the computer where the above commands were executed.
+
